@@ -60,7 +60,7 @@ A powerful, user-friendly web application for data cleaning and exploration. Bui
    streamlit run app.py
    ```
 
-5. **To use the app directly visit 
+4. **Directly use the application**
    ```bash
    https://suyash1912-mising-data-tool-script-youo6e.streamlit.app/
    ```
