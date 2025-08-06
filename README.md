@@ -1,139 +1,126 @@
-Data Cleaner Pro 🧼
-A user-friendly web application built with Streamlit that allows you to upload a CSV file, perform essential cleaning operations, and explore the data with interactive visualizations.
+# Data Cleaner Pro
 
-(A sample screenshot of the application interface)
+A powerful, user-friendly web application for data cleaning and exploration. Built with Streamlit, it enables you to upload CSV files, perform essential cleaning operations, and visualize your data with interactive 3D plots.
 
-🚀 Features
-📁 CSV Upload: Easily upload your dataset in CSV format.
+## Features
 
-🗑️ Duplicate Removal: Remove duplicate rows with a single checkbox.
+### Data Processing
+- **CSV Upload**: Seamlessly upload datasets in CSV format
+- **Duplicate Removal**: Remove duplicate rows with one click
+- **Missing Value Imputation**: Automatically detect and fill missing values using Mean, Median, or Mode
+- **Data Overview**: Get comprehensive dataset statistics including shape, memory usage, and data types
 
-🔧 Missing Value Imputation:
+### Visualization
+- **Interactive 3D Scatter Plots**: Generate dynamic visualizations for datasets with numeric columns
+- **Customizable Axes**: Select any numeric columns for X, Y, and Z axes
+- **Color Coding**: Optionally color-code data points by any column
 
-Automatically detects columns with missing values.
+### Export
+- **Clean Data Download**: Export processed datasets as CSV files with automatic naming
 
-Fill missing numeric values using Mean, Median, or Mode.
+## Tech Stack
 
-📊 Data Overview:
+- **Framework**: Streamlit
+- **Data Processing**: Pandas
+- **Visualization**: Plotly Express, Matplotlib
+- **Python**: 3.9+
 
-Get a quick summary of your dataset's shape (rows, columns) and memory size.
+## Installation
 
-View the first few rows of the data.
+### Prerequisites
+- Python 3.9 or higher
+- pip package manager
 
-See a breakdown of column data types.
+### Setup Instructions
 
-📈 Interactive 3D Visualization:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/suyash1912/mising_data_tool.git
+   cd data-cleaner-pro
+   ```
 
-If your data has at least three numeric columns, you can generate an interactive 3D scatter plot.
+2. **Create a virtual environment** (recommended)
+   ```bash
+   # macOS/Linux
+   python3 -m venv venv
+   source venv/bin/activate
+   
+   # Windows
+   python -m venv venv
+   .\venv\Scripts\activate
+   ```
 
-Select columns for the X, Y, and Z axes.
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Optionally color-code the plot by any column in the dataset.
+4. **Run the application**
+   ```bash
+   streamlit run app.py
+   ```
 
-⬇️ Download Cleaned Data: Download the processed, clean dataset as a new CSV file.
+The application will automatically open in your default web browser.
 
-🛠️ Tech Stack
-Framework: Streamlit
+## Usage Guide
 
-Data Manipulation: Pandas
+### Getting Started
+1. **Upload Your Data**: Use the sidebar file uploader to select your CSV file
+2. **Configure Settings**: Choose your preferred cleaning options in the sidebar
 
-Visualization: Plotly Express & Matplotlib
+### Data Cleaning
+1. **Review Data Overview**: Examine dataset statistics and preview in the main panel
+2. **Handle Missing Values**: 
+   - View columns with missing data and their counts
+   - Select imputation method (Mean, Median, or Mode)
+   - Click "Clean Missing Values" to apply changes
+3. **Remove Duplicates**: Toggle the duplicate removal option as needed
 
-⚙️ Installation & Setup
-To run this application on your local machine, please follow these steps.
+### Visualization
+1. **Enable 3D Plotting**: Check the "Enable 3D Scatter Plot" option
+2. **Configure Plot**: 
+   - Select numeric columns for X, Y, and Z axes
+   - Choose an optional color-coding column
+3. **Interact**: Rotate, zoom, and hover over data points in the 3D plot
 
-1. Prerequisites
-Make sure you have Python 3.9 or higher installed on your system.
+### Export Results
+1. **Download Cleaned Data**: Click "Download Cleaned CSV" to save your processed dataset
+2. **File Naming**: Downloaded files are automatically named `cleaned_[original_filename].csv`
 
-2. Clone the Repository
-Bash
+## Requirements
 
-git clone https://github.com/your-username/data-cleaner-pro.git
-cd data-cleaner-pro
-3. Create a Virtual Environment (Recommended)
-It's a good practice to create a virtual environment to manage project dependencies.
+Create a `requirements.txt` file with the following dependencies:
 
-On macOS/Linux:
-
-Bash
-
-python3 -m venv venv
-source venv/bin/activate
-On Windows:
-
-Bash
-
-python -m venv venv
-.\venv\Scripts\activate
-4. Install Dependencies
-Create a file named requirements.txt with the following content:
-
-Plaintext
-
+```
 streamlit
 pandas
 matplotlib
 plotly
-Then, install the required packages using pip:
+```
 
-Bash
+## Project Structure
 
-pip install -r requirements.txt
-5. Run the Application
-Now you are ready to run the Streamlit app. Use the following command in your terminal:
+```
+data-cleaner-pro/
+│
+├── script.py              # Main Streamlit application
+├── requirements.txt    # Project dependencies
+├── README.md          # Project documentation
+└── LICENSE            # License file
+```
 
-Bash
+## Contributing
 
-streamlit run app.py
-(Assuming you have saved the provided code as app.py)
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-Your web browser should automatically open a new tab with the "Data Cleaner Pro" application running.
+## License
 
-📖 How to Use the App
-Upload File: Click the "Browse files" button in the sidebar to upload your CSV file.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Set Cleaning Options:
+## Author
 
-Choose your preferred method (Mean, Median, or Mode) for filling missing numeric data.
+**Suyash Mukherjee**
 
-Check or uncheck the "Remove duplicate rows" box as needed.
+---
 
-Toggle the 3D plot visibility with the "Enable 3D Scatter Plot" checkbox.
-
-Review Overview: Once the file is uploaded, the main panel will display:
-
-The shape and size of your data.
-
-A preview of the first 5 rows.
-
-A count of columns by their data type.
-
-Clean Missing Values:
-
-The app will show a list of columns with missing values and their counts.
-
-Click the "🔧 Clean Missing Values" button to apply the imputation method you selected in the sidebar.
-
-A success message and a preview of the transformed data will appear.
-
-Explore in 3D:
-
-Scroll down to the "3D Visualization" section.
-
-Select the desired numeric columns for the X, Y, and Z axes from the dropdown menus.
-
-(Optional) Choose a column to color-code the data points.
-
-Interact with the plot by rotating, zooming, and hovering over points.
-
-Download Your Data:
-
-Once you are satisfied with the cleaning, scroll to the bottom.
-
-Click the "📥 Download Cleaned CSV" button to save the cleaned data to your computer. The downloaded file will be named cleaned_[your_original_filename].csv.
-
-✍️ Author
-This project was built with ❤️ by Suyash Mukherjee.
-
-📄 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+*Built with ❤️ using Streamlit and Python*
