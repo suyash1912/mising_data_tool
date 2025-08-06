@@ -35,7 +35,7 @@ A powerful, user-friendly web application for data cleaning and exploration. Bui
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/data-cleaner-pro.git
+   git clone https://github.com/suyash1912/mising_data_tool.git
    cd data-cleaner-pro
    ```
 
