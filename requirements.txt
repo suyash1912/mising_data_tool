@@ -4,3 +4,4 @@ openai
 plotly
 openrouter
 dotenv
+matplotlib
