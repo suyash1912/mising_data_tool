@@ -60,6 +60,11 @@ A powerful, user-friendly web application for data cleaning and exploration. Bui
    streamlit run app.py
    ```
 
+5. **To use the app directly visit 
+   ```bash
+   https://suyash1912-mising-data-tool-script-youo6e.streamlit.app/
+   ```
+
 The application will automatically open in your default web browser.
 
 ## Usage Guide
